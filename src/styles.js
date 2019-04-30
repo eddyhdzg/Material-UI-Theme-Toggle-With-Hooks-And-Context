@@ -4,19 +4,21 @@ const flex = {
   justifyContent: "space-evenly"
 };
 
-const styles = ({ spacing: { unit } }) => ({
+const styles = theme => ({
   root: {
-    margin: `${unit * 3}px auto`,
-    padding: unit * 2,
+    transition: "background-color .225s cubic-bezier(.4, 0, 1, 1)",
+
+    margin: `${theme.spacing.unit * 8}px auto`,
+    padding: theme.spacing.unit * 2,
     maxWidth: 400
   },
   header: {
     ...flex,
-    marginTop: unit * 2
+    marginTop: theme.spacing.unit * 2
   },
   form: {
     ...flex,
-    marginBottom: unit
+    marginBottom: theme.spacing.unit
   }
 });
 

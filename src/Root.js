@@ -11,7 +11,7 @@ const AppProvider = () => {
     setContext({ ...context, [name]: value });
   };
 
-  const { type, color, unit } = context;
+  const { type, color, unit, fontSize } = context;
 
   const theme = createMuiTheme({
     palette: {
@@ -20,6 +20,9 @@ const AppProvider = () => {
     },
     spacing: {
       unit
+    },
+    typography: {
+      fontSize
     }
   });
 
